@@ -291,6 +291,22 @@ server.tool(
   }
 );
 
+server.tool(
+  'discard_envelope',
+  'Discard a draft envelope. Moves it to discarded state. Use this instead of delete when the API key lacks ROLE_ENVELOPE_DELETE.',
+  {
+    envelopeId: z.string().describe('Envelope UUID'),
+  },
+  async ({ envelopeId }) => {
+    try {
+      const data = await api.discardEnvelope(creds, envelopeId);
+      return result(data);
+    } catch (err) {
+      return errorResult(err);
+    }
+  }
+);
+
 // Start server
 const transport = new StdioServerTransport();
 await server.connect(transport);

@@ -105,6 +105,10 @@ export function cancelEnvelope(creds, envelopeId) {
   return apiCall('POST', `/api/envelopes/${envelopeId}/cancel`, creds);
 }
 
+export function discardEnvelope(creds, envelopeId) {
+  return apiCall('POST', `/api/envelopes/${envelopeId}/discard`, creds);
+}
+
 // === Document operations ===
 
 export async function uploadFile(creds, filePath) {
