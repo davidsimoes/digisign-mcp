@@ -160,11 +160,13 @@ export function getRecipient(creds, envelopeId, recipientId) {
 
 // === Tag operations ===
 
-export function addTag(creds, envelopeId, { documentId, recipientId, type, placeholder, page, xPosition, yPosition, positioning }) {
+export function addTag(creds, envelopeId, { documentId, recipientId, type, placeholder, page, xPosition, yPosition, positioning, scale }) {
   const body = {
     recipient: `/api/envelopes/${envelopeId}/recipients/${recipientId}`,
     type: type || 'signature',
   };
+
+  if (scale) body.scale = scale;
 
   if (placeholder) {
     // Placeholder-based positioning

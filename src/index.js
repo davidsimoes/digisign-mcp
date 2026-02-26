@@ -229,6 +229,7 @@ server.tool(
     type: z.enum(['signature', 'approval', 'text', 'date_of_signature', 'checkbox']).optional().describe('Tag type (default: signature)'),
     placeholder: z.string().optional().describe('Placeholder text to find in document (e.g. "{podpis_klient}")'),
     positioning: z.enum(['top_left', 'top_center', 'top_right', 'middle_left', 'center', 'middle_right', 'bottom_left', 'bottom_center', 'bottom_right']).optional().describe('How tag aligns to placeholder'),
+    scale: z.number().optional().describe('Tag size as percentage (default 100). Use 50-80 for smaller tags.'),
     page: z.number().optional().describe('Page number (for coordinate positioning)'),
     xPosition: z.number().optional().describe('X position in points (for coordinate positioning)'),
     yPosition: z.number().optional().describe('Y position in points (for coordinate positioning)'),
