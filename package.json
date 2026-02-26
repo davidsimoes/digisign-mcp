@@ -1,0 +1,20 @@
+{
+  "name": "digisign-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "digisign-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["mcp", "digisign", "digital-signatures", "claude-code"],
+  "author": "David Simoes",
+  "license": "MIT",
+  "description": "MCP server for DigiSign.cz digital signature API",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^4.3.6"
+  }
+}
