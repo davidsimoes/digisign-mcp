@@ -4,6 +4,8 @@ MCP server for the [DigiSign.cz](https://www.digisign.cz) digital signature API.
 
 Create, send, and manage digital signature envelopes directly from your AI coding assistant.
 
+[![digisign-mcp MCP server](https://glama.ai/mcp/servers/davidsimoes/digisign-mcp/badges/card.svg)](https://glama.ai/mcp/servers/davidsimoes/digisign-mcp)
+
 ## Setup
 
 ### 1. Get DigiSign API keys
